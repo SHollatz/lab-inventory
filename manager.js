@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var inquirer = require("inquirer");
 var Table = require("cli-table");
 var table = new Table({
-    head: ['Item ID', 'Product Name', 'Department Name', 'Price', 'Stock Quantity'],
+    head: ['Item ID', 'Product Name', 'Hazard Group', 'Price per Unit', 'Price per g/mL', 'Stock Quantity in g/mL'],
 });
 
 var connection = mysql.createConnection({
