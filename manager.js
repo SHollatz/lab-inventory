@@ -89,7 +89,7 @@ function addInventory() {
         {
             name: "product_id",
             type: "input",
-            message: "Type in item_id of substance you want to add"
+            message: "Type in item_id of substance you want to add: "
         },
         {
             name: "amount",
@@ -103,7 +103,7 @@ function addInventory() {
         var update = "UPDATE substances SET stock_quantity_g_or_mL = ? WHERE item_id = ?";
         connection.query(update, [new_quantity, answer.product_id], function (err, result) {
             if (err) throw err;
-            console.log("stock_quantity is from " + stock_quantity + " to " + new_quantity + " updated.");
+            // console.log("stock_quantity is from " + stock_quantity + " to " + new_quantity + " updated.");
         });
         console.log("\n\n");
         runSearch();
@@ -138,15 +138,15 @@ function addNewProduct() {
             message: "How many g/mL do you want to add?"
         },
     ]).then(function (answer) {
-        console.log("answer");
+        // console.log("answer");
         var insert = "INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_or_mL, stock_quantity_g_or_mL)\n"
             + "VALUES(?, ?, ?, ?, ?)";
-            console.log("insert", insert);
+            // console.log("insert", insert);
         connection.query(insert, [answer.product_name, answer.hazard_group, answer.price_unit, answer.price_g, answer.stock_quantity], function (err, result) {
             if (err) {
                 console.log(err);
             }
-            console.log("result", answer);
+            // console.log("result", answer);
         });
         console.log("\n\n");
         runSearch();

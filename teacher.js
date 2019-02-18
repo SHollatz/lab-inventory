@@ -41,15 +41,15 @@ function runSearch() {
 
     ]).then(function (answer) {
         //console.log(table[answer.product_id -1][4]);
-        console.log("answer", answer);
+        // console.log("answer", answer);
         var item_id = answer.product_id-1;
         var stock_quantity = table[item_id][5];
         price = table[item_id][4];
         if (stock_quantity < answer.quantity) {
             console.log("Insufficient quantity!");
         } else {
-            var new_quantity = table[item_id][4] - answer.quantity;
-            var update = "UPDATE products SET stock_quantity = ? WHERE item_id = ?";
+            var new_quantity = table[item_id][5] - answer.quantity;
+            var update = "UPDATE substances SET stock_quantity_g_or_mL = ? WHERE item_id = ?";
             connection.query(update,[new_quantity, answer.product_id], function(err, result) {
                 if (err) throw err;
                 //console.log("stock_quantity is from " + stock_quantity + " to " + new_quantity + " updated.");

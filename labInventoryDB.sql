@@ -16,10 +16,10 @@ INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_
 VALUES("Methanol", "flammable liquid", 13.76, 0.02752, 500);
 
 INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_or_mL, stock_quantity_g_or_mL)
-VALUES("Ethanol", "flammable liquid", 49.18, 0.04918, 1000);
+VALUES("Ethanol", "flammable liquid", 49.18, 0.04918, 980);
 
 INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_or_mL, stock_quantity_g_or_mL)
-VALUES("Acetone", "flammable liquid", 59.25, 0.01185, 5000);
+VALUES("Acetone", "flammable liquid", 59.25, 0.01185, 4500);
 
 INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_or_mL, stock_quantity_g_or_mL)
 VALUE("Hexane", "flammable liquid", 324, 6.48, 50);
@@ -41,5 +41,8 @@ VALUE("Potassium", "Alkali metal", 24.45, 2.445, 10);
 
 INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_or_mL, stock_quantity_g_or_mL)
 VALUE("Lithium", "Alkali metal", 20.75, 8.3, 2.5);
+
+INSERT INTO substances (product_name, hazard_group, price_per_unit, price_per_g_or_mL, stock_quantity_g_or_mL)
+VALUE("Silica", "non-hazardous", 34.52, 0.28767, 120);
 
 SELECT * FROM substances;
