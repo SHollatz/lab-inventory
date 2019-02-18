@@ -1,0 +1,24 @@
+{
+  "name": "lab-inventory",
+  "version": "1.0.0",
+  "description": "Basic inventory app for school laboratories",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHollatz/lab-inventory.git"
+  },
+  "author": "Sabine Hollatz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SHollatz/lab-inventory/issues"
+  },
+  "homepage": "https://github.com/SHollatz/lab-inventory#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  }
+}
